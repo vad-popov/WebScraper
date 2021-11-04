@@ -1,0 +1,5 @@
+_bytes = input().encode('utf-8')
+_int = int(input())
+code = sum(_int.to_bytes(2, 'little'))
+bytes_2 = bytes([(i + code) for i in _bytes])
+print(bytes_2.decode('utf-8'))
